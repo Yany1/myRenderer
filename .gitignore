@@ -75,4 +75,7 @@ Temporary Items
 # Ignore all local history of files
 .history
 
+### Project specifics ###
+*.tga
+
 # End of https://www.gitignore.io/api/c++,macos,visualstudiocode
