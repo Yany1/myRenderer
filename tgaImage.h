@@ -1,6 +1,6 @@
 // https://github.com/ssloy/tinyrenderer
-#ifndef __TGAIMAGE_H__
-#define __TGAIMAGE_H__
+#ifndef TGAIMAGE_H
+#define TGAIMAGE_H
 
 #include <fstream>
 
@@ -95,4 +95,4 @@ public:
     void clear();
 };
 
-#endif //__TGAIMAGE_H__
+#endif // TGAIMAGE_H

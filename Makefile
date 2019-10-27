@@ -1,9 +1,6 @@
 
-tga: tga.cpp tgaImage.h tgaImage.cpp
-	clang++ -g -Wall -o tga tga.cpp tgaImage.cpp
+test: test.cpp line.h line.cpp tgaImage.h tgaImage.cpp
+	clang++ -g -Wall -o test test.cpp tgaImage.cpp line.cpp
 
 clean:
-	rm -rf tga *.o *.out *.dSYM *.tga
-# 
-# tga.o: tga.cpp tgaImage.h tgaImage.cpp
-# 	clang++ -g -Wall -c -o tga.o tga.c
+	rm -rf test *.o *.out *.dSYM *.tga
