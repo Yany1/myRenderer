@@ -14,8 +14,8 @@ int main(int argc, char** argv) {
 
     Line l1(std::make_pair(200, 200), std::make_pair(400, 200), white);
     Line l2(std::make_pair(200, 200), std::make_pair(400, 300), green);
-    Line l3(std::make_pair(200, 200), std::make_pair(500, 250), white);
-    Line l4(std::make_pair(200, 200), std::make_pair(500, 450), green);
+    Line l3(std::make_pair(200, 200), std::make_pair(200, 400), white);
+    Line l4(std::make_pair(200, 200), std::make_pair(250, 450), green);
 
     l1.draw(image);
     l2.draw(image);

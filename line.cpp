@@ -17,15 +17,28 @@ void Line::draw(TGAImage& image) {
     int dy = end.second - start.second;
 
     int p = 2 * dy - dx;
+    if (abs(dy) > abs(dx)) {
+        for (int y = start.second, x = start.first; y <= end.second; y++) {
+            image.set(x, y, color);
 
-    for (int x = start.first, y = start.second; x <= end.first; x++) {
-        image.set(x, y, color);
-
-        if (p > 0) {
-            y++;
-            p = p + 2 * dy - 2 * dx;
+            if (p > 0) {
+                x++;
+                p = p + 2 * dx - 2 * dy;
+            }
+            else
+                p = p + 2 * dx;
         }
-        else
-            p = p + 2 * dy;
+    }
+    else {
+        for (int x = start.first, y = start.second; x <= end.first; x++) {
+            image.set(x, y, color);
+
+            if (p > 0) {
+                y++;
+                p = p + 2 * dy - 2 * dx;
+            }
+            else
+                p = p + 2 * dy;
+        }
     }
 }
